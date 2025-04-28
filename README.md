@@ -83,20 +83,20 @@ _Nota_: mi app está en `MyApp` en `main.dart`
 
 ```
 MaterialApp
-|__ `CalculadoraPage`
-    |__ `Scaffold`
-        |__ `AppBar`
-        |   |__ `Text`
-        |__ `Body`
-            |__ `Center`
-                |__ `Column`
-                    |__ `Text`
-                    |__ `Row`
-                    |   |__ `TextField`
-                    |   |__ `TextField`
-                    |__ `Button`
-                    |   |__ `Text`
-                    |__ `Text`
+|__ CalculadoraPage
+    |__ Scaffold
+        |__ AppBar
+        |   |__ Text
+        |__ Body: Container
+            |__ Center
+                |__ Column
+                    |__ Text
+                    |__ Row
+                    |   |__ TextField
+                    |   |__ TextField
+                    |__ Button
+                    |   |__ Text
+                    |__ Text
 ```
 
 En el center no se puede poner un padding como en los otros elementos/children, lo envolvemos en un Container y le ponemos a este el padding.
