@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojects/CalculadoraPage.dart';
 
 void main() {
   runApp(const MyApp()); // no se podría poner MyApp(12) porque {super.key} es nominal
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: CalculadoraPage()
     );
   }
 }
@@ -42,12 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
-    return Scaffold(
+    return Scaffold( // Scaffold es la estructura general de la aplicación
+      /* En este caso:
+      * AppBar
+      * Body
+      * FAB */
       appBar: AppBar(
-
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
         title: Text(widget.title),
       ),
       body: Center(
@@ -58,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
             Text(
-              '$_counter',
+              '$_counter', // posicional
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
