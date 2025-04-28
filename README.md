@@ -81,6 +81,7 @@ _Nota_: mi app está en `MyApp` en `main.dart`
 8. En `CalculadoraState` ponemos una variable (que para algo estamos haciendo Stateful)
 9. Planeamos y hacemos la jerarquía de componentes con `Scaffold`:
 
+```
 MaterialApp
 |__ `CalculadoraPage`
     |__ `Scaffold`
@@ -96,6 +97,7 @@ MaterialApp
                     |__ `Button`
                     |   |__ `Text`
                     |__ `Text`
+```
 
 En el center no se puede poner un padding como en los otros elementos/children, lo envolvemos en un Container y le ponemos a este el padding.
 Para recibir los datos de los `TextField`, usamos dos `TextEditingController`. Agregamos cada controller en el `TextField` correspondiente y cuando se actualizan los valores se guardan en los controllers.
